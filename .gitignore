@@ -1,5 +1,7 @@
 # ── Agent / harness local state (never commit) ──────────────────────────────
-.claude/
+# Claude Code: ignore local/personal settings only. .claude/commands/ IS shared
+# (reusable slash commands) — see that folder.
+.claude/settings.local.json
 .gemini/
 .cursor/
 .windsurf/
@@ -17,3 +19,10 @@ Thumbs.db
 # ── Notes / scratch (per-author, not shared) ────────────────────────────────
 *.local.md
 TODO.local.md
+
+# ── Real project data (CONFIDENTIAL — company/office projects) ──────────────
+# Every actual project instance under projects/ is PRIVATE company data and must
+# NEVER be committed/pushed. Only projects/README.md (the convention doc) is kept.
+# The fictional sample-project/ at the repo root stays tracked as reference.
+projects/*/
+!projects/README.md

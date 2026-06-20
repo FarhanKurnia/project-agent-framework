@@ -12,7 +12,7 @@ projects/
 │   ├── knowledge/           # curated, stable facts
 │   ├── memory/              # living, cited items
 │   └── outputs/             # regenerable artifacts
-├── kemitraan/               # example slugs
+├── helpdesk/                # example slugs
 ├── hris/
 ├── inventory/
 └── crm/
@@ -39,7 +39,7 @@ projects/
 
 | Slug | Domain example |
 |------|----------------|
-| `kemitraan` | Partnership / merchant management |
+| `helpdesk` | IT helpdesk / support ticketing |
 | `hris` | Human resources information system |
 | `inventory` | Warehouse / stock management |
 | `crm` | Customer relationship management |

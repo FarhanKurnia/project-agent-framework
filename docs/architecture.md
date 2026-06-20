@@ -113,7 +113,7 @@ Each project is a self-contained subtree under `projects/`. A project's Source, 
 
 ```
 projects/
-├── kemitraan/      # e.g. a partnership management product
+├── helpdesk/       # e.g. an IT helpdesk / support system
 │   ├── project.md
 │   ├── source/  knowledge/  memory/  outputs/
 ├── hris/           # e.g. a human resources system
