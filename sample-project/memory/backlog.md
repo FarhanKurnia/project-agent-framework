@@ -2,8 +2,8 @@
 doc_type: memory
 memory_type: backlog
 project: sample-employee-portal
-last_reviewed: 2026-07-06
-counter: 2
+last_reviewed: 2026-07-10
+counter: 4
 ---
 
 # Backlog — Acme Employee Portal
@@ -12,7 +12,64 @@ counter: 2
 
 ## New / Ready
 
-*(FEAT-002 Payslip Viewer and FEAT-003 Leave Request have no requirements yet — per the coverage report — so they have no backlog items. Items will appear here once requirements are extracted.)*
+*(FEAT-003 Leave Request still has no requirement, so it has no backlog item yet. The FEAT-002 Payslip Viewer items below were ingested from `SRC-BKL-2026-07-10`; their `REQ-002` is still `proposed`, so they are preliminary.)*
+
+### BKL-003 — Build payslip viewer (current + historical)
+
+---
+id: BKL-003
+title: Build payslip viewer (current + historical)
+description: Implement the payslip viewer (current + historical payslips) in the Employee Portal Core (MOD-001); delivers FEAT-002.
+status: new
+priority: medium
+size: M
+confidence: medium
+derived_from: [REQ-002]
+delivers: [FEAT-002]
+owner:
+sprint: none
+dependencies: []
+external_ref: clickup:8612394     # ClickUp task id (manual two-way sync)
+source: [SRC-BKL-2026-07-10]
+source-status: proposed          # REQ-002 is still proposed
+created: 2026-07-10
+updated: 2026-07-10
+---
+
+Subtasks:
+- [ ] fetch payslips from payroll API
+- [ ] list view + detail view
+- [ ] handle empty state
+
+Ingested from the Payslip roadmap raw backlog (SRC-BKL-2026-07-10). REQ-002 is still `proposed`, so this item is preliminary until the requirement is accepted.
+
+### BKL-004 — Add payslip PDF export
+
+---
+id: BKL-004
+title: Add payslip PDF export
+description: Add PDF export to the payslip viewer; delivers part of FEAT-002.
+status: new
+priority: medium
+size: S
+confidence: medium
+derived_from: [REQ-002]
+delivers: [FEAT-002]
+owner:
+sprint: none
+dependencies: [BKL-003]
+external_ref: clickup:8612395     # ClickUp task id (manual two-way sync)
+source: [SRC-BKL-2026-07-10]
+source-status: proposed          # REQ-002 is still proposed
+created: 2026-07-10
+updated: 2026-07-10
+---
+
+Subtasks:
+- [ ] PDF rendering
+- [ ] download button
+
+Depends on BKL-003 (the viewer must exist before export is wired in).
 
 ## In Progress
 
@@ -69,3 +126,4 @@ Depends on BKL-001 (the integration must exist before the UI can wire to it).
 | 2026-06-15 | agent | Created file (counter=0). | Onboarding (SRC-MTG-2026-06-15). |
 | 2026-06-16 | agent | Created BKL-001, BKL-002 (counter=2). | Backlog Management — generation from REQ-001. |
 | 2026-07-06 | agent | BKL-001, BKL-002 → in-progress, sprint S-01, owner ACTOR-002. | Sprint Planning — commitment (S-01). |
+| 2026-07-10 | agent | Created BKL-003, BKL-004 (counter=4). | Backlog Ingestion (SRC-BKL-2026-07-10) — Payslip roadmap. |

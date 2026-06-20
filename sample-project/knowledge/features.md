@@ -2,7 +2,7 @@
 doc_type: knowledge
 knowledge_type: features
 project: sample-employee-portal
-last_reviewed: 2026-06-15
+last_reviewed: 2026-07-10
 ---
 
 # Features — Acme Employee Portal
@@ -20,7 +20,7 @@ last_reviewed: 2026-06-15
 - **Module:** MOD-001 (Employee Portal Core)
 - **Serves:** ACTOR-001
 - **Description:** Employees view current and historical payslips.
-- **Key requirements:** *(to be extracted)*
+- **Key requirements:** REQ-002 (proposed)
 - **Status:** proposed
 
 ## FEAT-003 — Leave Request Submission
@@ -41,3 +41,4 @@ last_reviewed: 2026-06-15
 | Date | Editor | Change | Reason |
 |------|--------|--------|--------|
 | 2026-06-15 | agent | Added FEAT-001/002/003. | Onboarding (SRC-MTG-2026-06-15). |
+| 2026-07-10 | agent | FEAT-002 key requirement = REQ-002 (proposed). | Backlog Ingestion (SRC-BKL-2026-07-10) — draft REQ linked. |
