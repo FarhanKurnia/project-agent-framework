@@ -59,6 +59,7 @@ Consistent IDs are how items cross-reference and deduplicate.
 | Open Question | `Q` | `Q-005` |
 | Risk | `RSK` | `RSK-002` |
 | Backlog item | `BKL` | `BKL-011` |
+| Assumption | `ASM` | `ASM-003` |
 
 - IDs are **zero-padded to 3 digits**, **monotonic**, and **never reused**. Superseded items keep their ID and gain `status: superseded`.
 - Within a project, each memory file owns its own counter.

@@ -27,9 +27,11 @@ type: functional | non-functional | constraint
 status: proposed                         # proposed | accepted | superseded | rejected
 priority: medium                         # low | medium | high | critical
 feature: [FEAT-###]                      # knowledge bridge
+phase: <1>                               # scope phase (earliest satisfaction)
 source: [<SRC-…>]                        # REQUIRED provenance
 owners: [<name>]
 acceptance: [<criterion>, <criterion>]   # how we know it's met
+assumptions: [ASM-###]                   # what this requirement rests on
 tags: [<tag>]
 created: <YYYY-MM-DD>
 updated: <YYYY-MM-DD>

@@ -31,9 +31,13 @@ templates/
 │   ├── action-items.md      # ACT-###
 │   ├── open-questions.md    # Q-###
 │   ├── risks.md             # RSK-###
-│   └── backlog.md           # BKL-###
+│   ├── backlog.md           # BKL-###
+│   └── assumptions.md       # ASM-###
 └── outputs/     # Shapes for generated artifacts
-    └── mom.md               # Minutes of Meeting
+    ├── mom.md                       # Minutes of Meeting
+    ├── requirements-traceability.md # trace matrix (Requirements Management)
+    ├── requirements-coverage.md     # coverage matrix (Requirements Management)
+    └── requirements-drift.md        # drift findings (Requirements Management)
 ```
 
 ## Structure of every template

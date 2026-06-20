@@ -63,21 +63,29 @@ See `capabilities/meeting-intelligence/README.md`.
 
 ---
 
-## Phase 2 — Requirements Management ⬜
+## Phase 2 — Requirements Management 🟦
 
-**Goal:** Treat requirements as first-class, traceable artifacts — not just extracted lines.
+**Goal:** Treat requirements as first-class, traceable, governed artifacts — not just lines extracted from a meeting. Matures the `REQ-###` produced by Meeting Intelligence into clear, classified, traced requirements.
 
-**Proposed sub-workflows:**
+**Specified sub-workflows:**
 
 | Sub-workflow | Status | What it does |
 |--------------|--------|--------------|
-| Requirement Refinement | ⬜ | Turn raw `REQ-###` into well-formed requirements (clear acceptance criteria, priority, rationale). |
-| Traceability | ⬜ | Link requirements ↔ Knowledge (modules/features/actors) and ↔ Source. Build a trace matrix. |
-| Drift Detection | ⬜ | Flag requirements that conflict with decisions or newer sources, or that have gone stale. |
-| Requirement Categorization | ⬜ | Group/tag requirements (functional, non-functional, constraint) and map to scope phases. |
-| Coverage Analysis | ⬜ | Report which Knowledge features lack requirements, and vice-versa. |
+| Requirement Refinement | 🟦 | Turn raw `REQ-###` into well-formed requirements (statement, acceptance, priority, rationale, assumptions); promote to `accepted`. |
+| Requirement Categorization | 🟦 | Set type (functional/non-functional/constraint), tags, and phase mapping. |
+| Traceability | 🟦 | Link requirements ↔ Knowledge (features/modules/actors) and ↔ Source; build a trace matrix. |
+| Drift Detection | 🟦 | Flag requirements that conflict with decisions/newer sources, or have gone stale/duplicate/orphan. |
+| Coverage Analysis | 🟦 | Report which Knowledge features lack requirements, and vice-versa; phase coverage. |
 
-**New artifacts likely:** `outputs/reports/requirements-traceability-<date>.md`, possibly `memory/assumptions.md` (`ASM-###`).
+**Inputs:** `REQ-###` (from Meeting Intelligence) + `knowledge/*`.
+**Outputs:** refined `memory/requirements.md`, `memory/assumptions.md` (`ASM-###`), and reports `outputs/reports/requirements-traceability-<date>.md`, `requirements-coverage-<date>.md`, `requirements-drift-<date>.md`.
+
+**Definition of done for Phase 2:**
+- All five sub-workflows specified as executable Markdown procedures. ✅
+- New templates: `memory/assumptions.md`, `outputs/requirements-traceability.md`, `outputs/requirements-coverage.md`. ✅
+- `ASM-###` convention added to `AGENTS.md`. ✅
+
+See `capabilities/requirements-management/README.md`.
 
 ---
 

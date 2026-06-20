@@ -22,6 +22,7 @@ Source ──▶ Knowledge ──▶ Memory ──▶ (operated on by) Capabilit
 
 ## Capabilities currently specified
 - [Meeting Intelligence](capabilities/meeting-intelligence/README.md) — FSD-first onboarding, meeting analysis, MOM, and extraction of requirements/decisions/action-items/open-questions.
+- [Requirements Management](capabilities/requirements-management/README.md) — refine, classify, trace, and govern requirements (detect drift, analyze coverage).
 - [Backlog Management](capabilities/backlog-management/README.md) — turn accepted requirements into a prioritized, estimated, dependency-linked backlog.
 
 ## Docs

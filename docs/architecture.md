@@ -264,7 +264,7 @@ Add a directory under `projects/`. Nothing else changes. Isolation is automatic.
 Add a directory under `capabilities/` with a `README.md` and step specs. Register in docs. Existing projects can adopt it immediately. See §5.
 
 ### Axis 3 — More knowledge/memory types
-Add a template under `templates/knowledge/` or `templates/memory/` and a corresponding file convention in `AGENTS.md`. For example, a future `memory/assumptions.md` (`ASM-###`) plugs in without touching the rest.
+Add a template under `templates/knowledge/` or `templates/memory/` and a corresponding file convention in `AGENTS.md`. For example, `memory/assumptions.md` (`ASM-###`) — added in Phase 2 — plugged in without touching the rest.
 
 ### Non-axes (intentionally out of scope)
 - **Not** code, runtimes, or build tooling.
