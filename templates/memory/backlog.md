@@ -16,6 +16,7 @@ counter: 0
 
 > Each backlog item is a `BKL-###`. Lifecycle: `new → ready → in-progress → done | dropped`.
 > Trace each item to its origin (`REQ-###` / `ACT-###`) and its target `FEAT-###`.
+> Optional: link to an execution tracker (e.g. ClickUp) via `external_ref`, and break work into a `Subtasks:` checklist (manual two-way sync).
 
 <!-- TEMPLATE FOR A NEW ITEM:
 ### BKL-001 — <short title>
@@ -33,12 +34,17 @@ delivers: [FEAT-###]                     # what it builds
 owner: <name or ACTOR-###>
 sprint: <sprint-id or none>
 dependencies: [BKL-###]                  # blocking items
+external_ref: <tracker task id>          # e.g. clickup:8612394 — link to execution tracker (two-way sync)
 source: [<SRC-…>]                        # provenance
 created: <YYYY-MM-DD>
 updated: <YYYY-MM-DD>
 ---
 
 <Optional detail / acceptance notes.>
+
+Subtasks (optional — tracker task → subtask; manual two-way sync):
+- [ ] <subtask>
+- [x] <done subtask>
 -->
 
 ## New / Ready

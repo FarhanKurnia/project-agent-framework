@@ -24,6 +24,8 @@ Meeting Intelligence captures **what** was decided and requested; Backlog Manage
                                          (feeds future Sprint Planning — Phase 4)
 ```
 
+> **Alternate entry point — raw backlog.** A raw backlog (`source/backlog/*.md`) enters via [Step 1b — Backlog Ingestion](backlog-ingestion.md), which produces `BKL-###` bottom-up (proposing draft `REQ-###` or raising `Q-###` for items that trace to no existing scope). [Step 1 Generation](backlog-generation.md) remains the top-down path from accepted requirements.
+
 Backlog items are the **bridge** between Memory (requirements/decisions) and delivery (future Sprint Planning).
 
 ## The pipeline
@@ -44,6 +46,7 @@ Run steps 1–4 once to stand up a backlog; run step 5 (grooming) **recurringly*
 | Step | Reads | Writes |
 |------|-------|--------|
 | 1. Backlog Generation | `memory/requirements.md` (accepted), `memory/action-items.md`, `knowledge/features.md`, `memory/backlog.md` | `memory/backlog.md` (`BKL-###`) |
+| 1b. Backlog Ingestion | `source/backlog/*.md`, `knowledge/features.md`, `memory/requirements.md`, `memory/backlog.md` | `memory/backlog.md` (`BKL-###`), draft `REQ-###`, `Q-###`/`DEC-###`/`ASM-###` |
 | 2. Prioritization | `memory/backlog.md`, `memory/decisions.md` | `memory/backlog.md` (priority), `memory/decisions.md` (`DEC-###` rationale) |
 | 3. Estimation Capture | `memory/backlog.md`, `knowledge/*` | `memory/backlog.md` (size, confidence), `memory/open-questions.md` (`Q-###`) |
 | 4. Dependency Mapping | `memory/backlog.md`, `memory/requirements.md`, `knowledge/modules.md` | `memory/backlog.md` (`dependencies`) |
@@ -59,10 +62,12 @@ Run steps 1–4 once to stand up a backlog; run step 5 (grooming) **recurringly*
 6. **Never delete — close.** Delivered/dropped items get `status: done | dropped` with a note, and remain for history.
 7. **One project only.** Confine all writes to the target project. See `AGENTS.md` §7.
 8. **Follow `AGENTS.md`.** ID conventions, frontmatter shapes, and editing disciplines are defined there and in `templates/`.
+9. **Execution tracker (e.g. ClickUp) — manual two-way sync.** A `BKL-###` may carry `external_ref` (the tracker task id, e.g. `clickup:8612394`) and a `Subtasks:` checklist (tracker task → subtask). PAF is the **traceability** layer; the tracker is **execution**. Sync is manual, with `external_ref` as the join key.
 
 ## Step specifications
 
 1. [`backlog-generation.md`](backlog-generation.md)
+1b. [`backlog-ingestion.md`](backlog-ingestion.md) — *alternate entry: raw backlog source*
 2. [`prioritization.md`](prioritization.md)
 3. [`estimation-capture.md`](estimation-capture.md)
 4. [`dependency-mapping.md`](dependency-mapping.md)
@@ -71,6 +76,8 @@ Run steps 1–4 once to stand up a backlog; run step 5 (grooming) **recurringly*
 ## How an agent runs this
 
 > *"Generate and prioritize the backlog for `projects/hris`."*
+>
+> If a raw backlog exists in `source/backlog/`, run **Backlog Ingestion** (step 1b) first to load it as `BKL-###`, then continue with steps 2–4.
 
 1. Read `AGENTS.md`, this `README.md`, and the project's `memory/requirements.md`, `memory/action-items.md`, `knowledge/*`, `memory/backlog.md`.
 2. Run **Backlog Generation** (step 1) → create `BKL-###` for each accepted requirement / recurring action.

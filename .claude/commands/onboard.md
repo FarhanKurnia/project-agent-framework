@@ -13,7 +13,7 @@ Onboard project **$ARGUMENTS** via the FSD-first path: two tracks — Knowledge 
 - `$PROJECT` = that slug.
 
 ## 2. Scaffold (if not present)
-- Create from `templates/`: `source/{fsd,brd,sop,meetings}/`, `knowledge/`, `memory/`, `outputs/`, plus a `project.md` manifest.
+- Create from `templates/`: `source/{fsd,brd,sop,meetings,backlog}/`, `knowledge/`, `memory/`, `outputs/`, plus a `project.md` manifest.
 - Ensure the project is covered by the `.gitignore` rule `projects/*/` (private data — never commit/push).
 
 ## 3. Read and convert source

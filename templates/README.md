@@ -16,7 +16,8 @@ templates/
 │   ├── fsd.md               # Functional Specification Document
 │   ├── brd.md               # Business Requirements Document
 │   ├── sop.md               # Standard Operating Procedure
-│   └── meeting-notes.md     # Meeting notes / transcript (input to Meeting Intelligence)
+│   ├── meeting-notes.md     # Meeting notes / transcript (input to Meeting Intelligence)
+│   └── raw-backlog.md        # Raw backlog (input to Backlog Ingestion)
 ├── knowledge/   # Shapes for curated knowledge
 │   ├── project-overview.md
 │   ├── actors.md
