@@ -38,7 +38,12 @@ templates/
     ├── requirements-traceability.md # trace matrix (Requirements Management)
     ├── requirements-coverage.md     # coverage matrix (Requirements Management)
     ├── requirements-drift.md        # drift findings (Requirements Management)
-    └── sprint.md                    # sprint lifecycle artifact (Sprint Planning)
+    ├── sprint.md                    # sprint lifecycle artifact (Sprint Planning)
+    ├── status-report.md             # weekly/biweekly status (Reporting)
+    ├── decision-log.md              # decision history + supersession (Reporting)
+    ├── risk-report.md               # risk register by exposure (Reporting)
+    ├── open-questions-report.md     # question aging + blockers (Reporting)
+    └── portfolio-report.md          # cross-project roll-up (Reporting, repo-root reports/)
 ```
 
 ## Structure of every template

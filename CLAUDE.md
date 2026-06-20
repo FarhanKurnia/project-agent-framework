@@ -25,6 +25,7 @@ Source ──▶ Knowledge ──▶ Memory ──▶ (operated on by) Capabilit
 - [Requirements Management](capabilities/requirements-management/README.md) — refine, classify, trace, and govern requirements (detect drift, analyze coverage).
 - [Backlog Management](capabilities/backlog-management/README.md) — turn accepted requirements into a prioritized, estimated, dependency-linked backlog.
 - [Sprint Planning](capabilities/sprint-planning/README.md) — capacity modeling, sprint proposal, commitment (human-approved), and review prep.
+- [Reporting](capabilities/reporting/README.md) — status, decision-log, risk, open-questions, and cross-project portfolio reports (read-only synthesis).
 
 ## Docs
 - [`docs/concepts.md`](docs/concepts.md) · [`docs/architecture.md`](docs/architecture.md) · [`docs/roadmap.md`](docs/roadmap.md)

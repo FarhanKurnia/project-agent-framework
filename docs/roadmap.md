@@ -140,21 +140,29 @@ See `capabilities/sprint-planning/README.md`.
 
 ---
 
-## Phase 5 — Reporting ⬜
+## Phase 5 — Reporting 🟦
 
-**Goal:** Synthesize Knowledge + Memory into stakeholder-facing reports on demand.
+**Goal:** Synthesize Knowledge + Memory + Outputs into stakeholder-facing reports on demand. Read-only — produces no new primary data.
 
-**Proposed sub-workflows:**
+**Specified sub-workflows:**
 
 | Sub-workflow | Status | What it does |
 |--------------|--------|--------------|
-| Status Report | ⬜ | Weekly/biweekly project status (progress, risks, decisions, blockers). |
-| Decision Log Report | ⬜ | Render the decision history with rationale and supersession. |
-| Risk Report | ⬜ | Current risk register with mitigation status. |
-| Open Questions Report | ⬜ | Aging analysis of unresolved questions. |
-| Portfolio Report | ⬜ | Cross-project roll-up from each project's manifest (the first *intentional* cross-project capability). |
+| Status Report | 🟦 | Weekly/biweekly project status (progress, risks, decisions, blockers). |
+| Decision Log Report | 🟦 | Render the decision history with rationale and supersession. |
+| Risk Report | 🟦 | Current risk register ranked by exposure, with mitigation status. |
+| Open Questions Report | 🟦 | Aging analysis of unresolved questions; highlight blockers + stale. |
+| Portfolio Report | 🟦 | Cross-project roll-up from each project's manifest (the first *intentional* cross-project, read-only capability). |
 
-**New artifacts likely:** `outputs/reports/<topic>-<date>.md`.
+**Inputs:** `memory/*` + `outputs/*` + `knowledge/*` (per project); every `projects/<slug>/project.md` (portfolio).
+**Outputs:** `outputs/reports/<topic>-<date>.md` (per project); `reports/portfolio-<date>.md` (repo root, cross-project).
+
+**Definition of done for Phase 5:**
+- All five reports specified as executable procedures. ✅
+- Five report templates in `templates/outputs/`. ✅
+- Portfolio defined as the sanctioned cross-project, read-only exception. ✅
+
+See `capabilities/reporting/README.md`.
 
 ---
 

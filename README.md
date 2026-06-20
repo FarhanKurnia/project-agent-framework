@@ -81,9 +81,12 @@ project-agent-framework/
 │   ├── meeting-intelligence/      #   FSD-first onboarding, analysis, MOM, extraction
 │   ├── requirements-management/   #   refinement, categorization, traceability, drift, coverage
 │   ├── backlog-management/        #   generation, prioritization, estimation, dependencies, grooming
-│   └── sprint-planning/           #   capacity, proposal, commitment, review
+│   ├── sprint-planning/           #   capacity, proposal, commitment, review
+│   └── reporting/                 #   status, decision-log, risk, open-questions, portfolio
 ├── projects/                      # Where real project instances live (one dir per project)
 │   └── README.md                  #   multi-project conventions
+├── reports/                       # Cross-project (portfolio) reports — generated, read-only
+│   └── README.md
 └── sample-project/                # A fully-populated fictional reference project
     ├── project.md
     ├── source/
@@ -133,9 +136,9 @@ Memory evolves. The next meeting's analysis reconciles against existing memory r
 | **Requirements Management** | 🟦 Specified (refinement → categorization → traceability → drift → coverage) |
 | **Backlog Management** | 🟦 Specified (generation → prioritization → estimation → dependencies → grooming) |
 | **Sprint Planning** | 🟦 Specified (capacity → proposal → commitment → review) |
-| Reporting | ⬜ Planned |
+| **Reporting** | 🟦 Specified (status, decision-log, risk, open-questions, portfolio) |
 
-Only the **Meeting Intelligence** capability is specified in this initial release. See [`docs/roadmap.md`](docs/roadmap.md).
+All five core capabilities (P1–P5) are now specified — Meeting Intelligence, Requirements Management, Backlog Management, Sprint Planning, and Reporting. See [`docs/roadmap.md`](docs/roadmap.md).
 
 ---
 

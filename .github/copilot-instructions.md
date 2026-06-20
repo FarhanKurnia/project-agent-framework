@@ -25,5 +25,6 @@ Source ──▶ Knowledge ──▶ Memory ──▶ (operated on by) Capabilit
 - Requirements Management — refine, classify, trace, and govern requirements (`capabilities/requirements-management/`).
 - Backlog Management — prioritized, estimated, dependency-linked backlog (`capabilities/backlog-management/`).
 - Sprint Planning — capacity, proposal, commitment, review (`capabilities/sprint-planning/`).
+- Reporting — status, decision-log, risk, open-questions, portfolio (`capabilities/reporting/`).
 
 **When in doubt:** cite a source, reconcile before adding, raise an open question rather than guessing. Full rules in [`AGENTS.md`](../AGENTS.md).
