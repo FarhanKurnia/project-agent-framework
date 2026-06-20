@@ -37,7 +37,8 @@ templates/
     ├── mom.md                       # Minutes of Meeting
     ├── requirements-traceability.md # trace matrix (Requirements Management)
     ├── requirements-coverage.md     # coverage matrix (Requirements Management)
-    └── requirements-drift.md        # drift findings (Requirements Management)
+    ├── requirements-drift.md        # drift findings (Requirements Management)
+    └── sprint.md                    # sprint lifecycle artifact (Sprint Planning)
 ```
 
 ## Structure of every template

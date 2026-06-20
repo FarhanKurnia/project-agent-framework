@@ -115,20 +115,28 @@ See `capabilities/backlog-management/README.md`.
 
 ---
 
-## Phase 4 — Sprint Planning ⬜
+## Phase 4 — Sprint Planning 🟦
 
-**Goal:** Propose sprints from the backlog, capacity, and active decisions.
+**Goal:** Turn the prioritized, estimated backlog into committed, time-boxed sprints — and prepare their review. Consumes ready `BKL-###` from Backlog Management.
 
-**Proposed sub-workflows:**
+**Specified sub-workflows:**
 
 | Sub-workflow | Status | What it does |
 |--------------|--------|--------------|
-| Capacity Modeling | ⬜ | Capture team capacity and holidays for a sprint window. |
-| Sprint Proposal | ⬜ | Recommend a sprint set from `BKL-###` respecting priority, dependencies, and capacity. |
-| Sprint Commitment | ⬜ | Record the committed sprint (scope, owners) — likely in `outputs/sprints/`. |
-| Sprint Review Prep | ⬜ | Summarize completed vs. planned, carry-overs, and new risks. |
+| Capacity Modeling | 🟦 | Compute team capacity for a sprint window (people, holidays, absences, focus factor, velocity). |
+| Sprint Proposal | 🟦 | Recommend a sprint set from `BKL-###` respecting priority, dependencies, and capacity (propose, don't commit). |
+| Sprint Commitment | 🟦 | On human approval, finalize scope + owners; reflect into backlog (`status: in-progress`). |
+| Sprint Review Prep | 🟦 | At sprint end: completed vs planned, carry-overs, actual velocity, emergent risks/decisions. |
 
-**New artifacts likely:** `outputs/sprints/sprint-<n>-<date>.md`.
+**Inputs:** `BKL-###` (ready) + `knowledge/actors.md` + sprint window.
+**Outputs:** `outputs/sprints/sprint-<n>-<date>.md` (lifecycle: proposed → committed → closed); backlog item transitions.
+
+**Definition of done for Phase 4:**
+- All four sub-workflows specified as executable Markdown procedures. ✅
+- Sprint artifact template: `templates/outputs/sprint.md`. ✅
+- Human-in-the-loop on commitment (propose → approve → commit). ✅
+
+See `capabilities/sprint-planning/README.md`.
 
 ---
 

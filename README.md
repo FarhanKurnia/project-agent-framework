@@ -80,7 +80,8 @@ project-agent-framework/
 ├── capabilities/                  # AI workflow definitions
 │   ├── meeting-intelligence/      #   FSD-first onboarding, analysis, MOM, extraction
 │   ├── requirements-management/   #   refinement, categorization, traceability, drift, coverage
-│   └── backlog-management/        #   generation, prioritization, estimation, dependencies, grooming
+│   ├── backlog-management/        #   generation, prioritization, estimation, dependencies, grooming
+│   └── sprint-planning/           #   capacity, proposal, commitment, review
 ├── projects/                      # Where real project instances live (one dir per project)
 │   └── README.md                  #   multi-project conventions
 └── sample-project/                # A fully-populated fictional reference project
@@ -131,7 +132,7 @@ Memory evolves. The next meeting's analysis reconciles against existing memory r
 | **Meeting Intelligence** | 🟦 Specified (FSD-first onboarding → analysis → MOM → extraction) |
 | **Requirements Management** | 🟦 Specified (refinement → categorization → traceability → drift → coverage) |
 | **Backlog Management** | 🟦 Specified (generation → prioritization → estimation → dependencies → grooming) |
-| Sprint Planning | ⬜ Planned |
+| **Sprint Planning** | 🟦 Specified (capacity → proposal → commitment → review) |
 | Reporting | ⬜ Planned |
 
 Only the **Meeting Intelligence** capability is specified in this initial release. See [`docs/roadmap.md`](docs/roadmap.md).

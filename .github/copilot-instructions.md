@@ -24,5 +24,6 @@ Source ──▶ Knowledge ──▶ Memory ──▶ (operated on by) Capabilit
 - Meeting Intelligence — FSD-first onboarding, meeting analysis, MOM, extraction (`capabilities/meeting-intelligence/`).
 - Requirements Management — refine, classify, trace, and govern requirements (`capabilities/requirements-management/`).
 - Backlog Management — prioritized, estimated, dependency-linked backlog (`capabilities/backlog-management/`).
+- Sprint Planning — capacity, proposal, commitment, review (`capabilities/sprint-planning/`).
 
 **When in doubt:** cite a source, reconcile before adding, raise an open question rather than guessing. Full rules in [`AGENTS.md`](../AGENTS.md).
