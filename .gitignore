@@ -1,0 +1,19 @@
+# ── Agent / harness local state (never commit) ──────────────────────────────
+.claude/
+.gemini/
+.cursor/
+.windsurf/
+.github/copilot/      # local copilot cache only (instructions file IS committed)
+
+# ── OS / editor cruft ───────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# ── Notes / scratch (per-author, not shared) ────────────────────────────────
+*.local.md
+TODO.local.md
