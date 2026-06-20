@@ -203,4 +203,17 @@ The key property: **step 9 does not duplicate steps 4–6.** That is the entire 
 | **Memory** | "What we decided/asked/committed." | Fast, reconciled | **Must** cite a Source |
 | **Capabilities** | "How we process the above." | Stable spec | Declares inputs/outputs |
 
+---
+
+## The portfolio layer (above the project)
+
+The four-layer model above describes **one project**. When a single team builds **multiple projects**, a **portfolio layer** sits *above* the project instances to hold cross-project planning:
+
+- **Portfolio sprints (`PS-NN`)** live in `portfolio/sprints/` and pull backlog items (`BKL-###`) from several `projects/<slug>/` into one time-boxed sprint. Every cross-project reference is **qualified** (`<slug>:BKL-###`).
+- **Team profiles** (`portfolio/profiles/team.md`, `PERSON-###`) model the build team — the people who *execute* work — so sprints can be planned by skill and capacity.
+
+The portfolio layer is the planning counterpart to portfolio reporting: `portfolio/` *writes down* to projects (a narrow, sanctioned carve-out — only `sprint:` + `owner:` on listed items); `reports/` *reads up* read-only. It does not merge per-project IDs. See [`architecture.md`](architecture.md) §4.
+
+---
+
 Next: [`architecture.md`](architecture.md) for how projects, isolation, and agents are structured on top of this model.

@@ -25,6 +25,8 @@ Source ──▶ Knowledge ──▶ Memory ──▶ (operated on by) Capabilit
 - [Requirements Management](capabilities/requirements-management/README.md) — refine, classify, trace, and govern requirements (detect drift, analyze coverage).
 - [Backlog Management](capabilities/backlog-management/README.md) — turn accepted requirements into a prioritized, estimated, dependency-linked backlog.
 - [Sprint Planning](capabilities/sprint-planning/README.md) — capacity modeling, sprint proposal, commitment (human-approved), and review prep.
+- [Portfolio Sprint Planning](capabilities/portfolio-sprint-planning/README.md) — cross-project sprints (`PS-NN`) spanning multiple projects, with a narrow write-back to each project's backlog.
+- [Profile Management](capabilities/profile-management/README.md) — build-team roster (`PERSON-###`) with skills + capacity, powering skill-based assignment and effective sprints.
 - [Reporting](capabilities/reporting/README.md) — status, decision-log, risk, open-questions, and cross-project portfolio reports (read-only synthesis).
 
 ## Docs

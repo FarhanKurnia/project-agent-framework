@@ -134,11 +134,28 @@ projects/
 ### What is shared (the framework)
 Across all projects, the *same* templates, *same* capabilities, *same* agent contract, and *same* ID conventions apply. This is the point of a *framework*: uniform machinery, isolated data.
 
-### Cross-project concerns (future)
-Some legitimate cross-project needs are *out of scope* for the initial release but designed for:
-- **A shared glossary** for organization-wide terms (could live at `projects/_shared/glossary.md`).
-- **Portfolio reporting** across projects (a future Reporting capability reading each project's manifest).
-These are noted in [`roadmap.md`](roadmap.md); they will be added without disturbing per-project isolation.
+### Cross-project layers (repo root)
+Two repo-root layers sit **above** the isolated project instances:
+
+```
+                ┌──────────────────────────────────────────────┐
+  PORTFOLIO      │  portfolio/  — cross-project PLANNING        │  writes DOWN
+  LAYER          │  portfolio sprints (PS-NN); profiles         │  (narrow carve-out)
+                └──────────────────────────────────────────────┘
+                ┌──────────────────────────────────────────────┐
+  REPORTING      │  reports/    — cross-project SYNTHESIS       │  reads UP
+  LAYER          │  portfolio roll-ups (read-only)              │  (read-only)
+                └──────────────────────────────────────────────┘
+                          │ operate across │
+            ┌─────────────┴─────────────┐
+            ▼            ▼                ▼
+       project A     project B        …more…
+```
+
+- **`portfolio/`** holds cross-project *planning*: portfolio sprints (`PS-NN`) that pull backlog items from multiple projects, and team profiles (`PERSON-###`). It is the planning counterpart to `reports/`: `portfolio/` *writes down* to projects via a narrow, sanctioned carve-out (only `sprint:` + `owner:` on listed `BKL-###` — see `AGENTS.md` §7); `reports/` *reads up* read-only.
+- **`reports/`** holds cross-project *read-only* synthesis (portfolio reports).
+
+The portfolio layer does **not** merge per-project IDs; it references them with qualified `<slug>:BKL-###` refs. A reserved `projects/_shared/` remains the future home for org-wide *reference* assets (e.g. a corporate glossary) — see [`roadmap.md`](roadmap.md).
 
 ---
 

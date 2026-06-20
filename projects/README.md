@@ -35,6 +35,10 @@ projects/
 - **No cross-project references.** A project's files reference only files within the same project (plus the shared framework docs/templates/capabilities).
 - **One project per agent task.** Confine all writes to the target project. See [`../AGENTS.md`](../AGENTS.md) §4 and §7.
 
+## Portfolio layer
+
+A project's backlog item may carry `sprint: PS-NN` and `owner:` written by a **portfolio sprint** — the only sanctioned cross-project write (see [`../portfolio/`](../portfolio/) and [`../AGENTS.md`](../AGENTS.md) §7). A portfolio sprint pulls `<slug>:BKL-###` items from multiple projects into one time-boxed sprint at the repo root.
+
 ## Suggested project slugs (examples only)
 
 | Slug | Domain example |

@@ -26,3 +26,14 @@ TODO.local.md
 # The fictional sample-project/ at the repo root stays tracked as reference.
 projects/*/
 !projects/README.md
+
+# ── Real portfolio data (CONFIDENTIAL) ─────────────────────────────────────
+# Real portfolio sprints + team profiles are PRIVATE. Only the convention files
+# (README.md / manifest.md) under portfolio/ stay tracked. The fictional
+# sample-portfolio/ at the repo root stays tracked as reference.
+portfolio/sprints/*.md
+portfolio/profiles/*.md
+!portfolio/sprints/README.md
+!portfolio/profiles/README.md
+
+.venv/

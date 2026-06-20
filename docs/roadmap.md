@@ -166,6 +166,60 @@ See `capabilities/reporting/README.md`.
 
 ---
 
+## Phase 6a — Portfolio Planning 🟦
+
+**Goal:** Add a layer *above* the project so one team can plan sprints that span multiple `projects/<slug>/`. The planning counterpart to Phase 5's read-only portfolio reports.
+
+**Specified sub-workflows:**
+
+| Sub-workflow | Status | What it does |
+|--------------|--------|--------------|
+| Portfolio Capacity Modeling | 🟦 | Pooled capacity across in-scope projects' contributors. |
+| Portfolio Sprint Proposal | 🟦 | Recommend a cross-project set (`<slug>:BKL-###`) within pooled capacity. |
+| Portfolio Sprint Commitment | 🟦 | On human approval, write back `sprint: PS-NN` + `owner:` to each project's backlog (the `AGENTS.md` §7 carve-out). |
+| Portfolio Sprint Review Prep | 🟦 | Per-project done/partial, carry-overs, actual velocity. |
+
+**Inputs:** each in-scope project's `memory/backlog.md` (`ready` `BKL-###`) + `knowledge/actors.md`.
+**Outputs:** `portfolio/sprints/sprint-<PS-NN>-<date>.md` (repo root); backlog `sprint:`/`owner:` write-back per project.
+
+**Definition of done for Phase 6a:**
+- All four sub-workflows specified as executable Markdown procedures. ✅
+- New template `templates/outputs/portfolio-sprint.md`. ✅
+- New prefixes `PS-NN` + qualified `<slug>:BKL-###` in `AGENTS.md` §3; write-back carve-out in §7. ✅
+- `portfolio/` layer + `sample-portfolio/` reference. ✅
+
+> Team profiles power **Phase 6b** (below): skill-based assignment, capability measurement, and effective sprints.
+
+See [`capabilities/portfolio-sprint-planning/README.md`](../capabilities/portfolio-sprint-planning/README.md).
+
+---
+
+## Phase 6b — Team Profiles & Skill-Based Assignment 🟦
+
+**Goal:** Model the build team (the people who *execute* work) so portfolio sprints can assign by skill, measure capability, and plan effective sprints.
+
+**Specified sub-workflows:**
+
+| Sub-workflow | Status | What it does |
+|--------------|--------|--------------|
+| Profile Onboarding | 🟦 | Add a `PERSON-###` from an HR/hiring source (reconcile before add). |
+| Profile Maintenance | 🟦 | Update skills/level/availability; supersede (`alumni`), never delete. |
+| Load Reconciliation | 🟦 | Recompute `current_load` per PERSON from in-flight committed sprints. |
+| Skill Assignment & Coverage | 🟦 | Recommend `PERSON-###` owners by skill-overlap + residual capacity; render a coverage matrix; raise `Q-###` for gaps. |
+
+**Inputs:** `portfolio/profiles/team.md` (`PERSON-###`); each BKL's optional `skills_required:`.
+**Outputs:** maintained roster; per-person `current_load`; sprint coverage matrix + skill-gap `Q-###`.
+
+**Definition of done for Phase 6b:**
+- All four sub-workflows specified. ✅
+- Profile template `templates/portfolio/team.md`; `PERSON-###`/`TEAM-###` in `AGENTS.md` §3. ✅
+- `BKL.skills_required:` (optional) in the backlog template. ✅
+- `sample-portfolio/profiles/team.md` demonstrates coverage + a gap. ✅
+
+See [`capabilities/profile-management/README.md`](../capabilities/profile-management/README.md) and [`capabilities/portfolio-sprint-planning/skill-assignment.md`](../capabilities/portfolio-sprint-planning/skill-assignment.md).
+
+---
+
 ## Phase 6 — Cross-cutting & Integration ⬜
 
 **Goal:** Strengthen the framework's portability and connect it to the wider toolchain — *without* compromising the Markdown-first core.

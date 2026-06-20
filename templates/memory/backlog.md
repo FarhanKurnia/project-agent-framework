@@ -31,8 +31,9 @@ size: <t-shirt or points>                # S | M | L  or numeric estimate
 confidence: <low | medium | high>
 derived_from: [REQ-###, ACT-###]         # why this work exists
 delivers: [FEAT-###]                     # what it builds
-owner: <name or ACTOR-###>
-sprint: <sprint-id or none>
+skills_required: [skill, …]              # OPTIONAL; if absent, portfolio skill-assignment infers from delivers/tags
+owner: <name, ACTOR-###, or PERSON-###>
+sprint: <sprint-id or none>            # per-project S-NN, or portfolio PS-NN (written by a portfolio sprint via the AGENTS.md §7 carve-out)
 dependencies: [BKL-###]                  # blocking items
 external_ref: <tracker task id>          # e.g. clickup:8612394 — link to execution tracker (two-way sync)
 source: [<SRC-…>]                        # provenance

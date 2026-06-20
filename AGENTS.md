@@ -43,6 +43,7 @@ projects/<project-slug>/
 - **`templates/` is read-only.** It defines document shapes. Copy *from* it into a project; never edit the templates themselves unless asked to evolve the framework.
 - **`sample-project/` is read-only reference.** Do not mutate it as a side effect of a real task.
 - **`capabilities/`** defines workflows as Markdown specs. Treat each spec as a procedure to follow.
+- **Cross-project layers live at the repo root.** `portfolio/` holds cross-project *planning* (portfolio sprints `PS-NN`; team profiles arrive in Phase B); `reports/` holds cross-project *read-only* synthesis. Both are the sanctioned exceptions to "one project at a time" — see §7.
 
 ---
 
@@ -87,6 +88,16 @@ source/meetings/YYYY-MM-DD-<slug>.md        # e.g. 2026-06-15-standup.md
 outputs/meetings/YYYY-MM-DD-<slug>-mom.md
 outputs/reports/<topic>-<YYYY-MM-DD>.md
 ```
+
+### Cross-project (portfolio)
+| Type | Prefix | Example |
+|------|--------|---------|
+| Portfolio sprint | `PS` | `PS-01` |
+| Team profile | `PERSON` | `PERSON-001` |
+| Team (squad) | `TEAM` | `TEAM-01` |
+
+- Portfolio sprints are **org-wide** (counter in `portfolio/manifest.md`), distinct from per-project `S-NN`.
+- **Qualified refs:** when a portfolio artifact references a backlog item, always write `<project-slug>:BKL-###` (e.g. `hris:BKL-001`). A bare `BKL-###` is ambiguous across projects and is not allowed in `portfolio/`.
 
 ---
 
@@ -163,12 +174,13 @@ Currently specified: [`capabilities/meeting-intelligence/`](capabilities/meeting
 ## 7. Guardrails — what you must NOT do
 
 - ❌ **Do not invent sources.** If something is not in a source document, mark it as an *assumption* or raise it as an *open question* — do not silently add it to memory.
-- ❌ **Do not cross projects.** A change for `hris` must never touch `crm`.
+- ❌ **Do not cross projects.** A change for `hris` must never touch `crm`. The only sanctioned exceptions are the two repo-root cross-project layers: **Reporting** (read-only synthesis in `reports/`) and **Portfolio sprints** (the narrow write-back in `portfolio/`, below).
 - ❌ **Do not edit `templates/` or `sample-project/`** as a side effect of a project task.
 - ❌ **Do not delete memory items.** Supersede them.
 - ❌ **Do not strip provenance.** `source:` stays attached to its item.
 - ❌ **Do not create code, databases, APIs, or config** unless explicitly asked. This framework is Markdown-only by design.
 - ❌ **Do not change the ID conventions** in §3 ad hoc. They are the integrity guarantee.
+- ✅ **Portfolio sprint write-back — the one sanctioned cross-project write.** When a portfolio sprint (`PS-NN`) is committed on human approval, you MAY write **only** `sprint:` (`PS-NN`) and `owner:` — plus bump `status: in-progress` and `updated` — into each referenced project's `memory/backlog.md`, for exactly the `<slug>:BKL-###` items in the committed scope. Do not touch any other field or file (no `REQ/DEC/ACT/Q/RSK/ASM`, no `knowledge/`, no `source/`). Bidirectional integrity is mandatory: every committed row ⇔ a matching backlog entry. See [`capabilities/portfolio-sprint-planning/`](capabilities/portfolio-sprint-planning/README.md).
 
 ---
 
